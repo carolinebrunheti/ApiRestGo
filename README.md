@@ -78,24 +78,21 @@ Resposta `201 Created`:
 
 ## 🐳 Banco de dados local
 
-O `docker-compose.yml` sobe um PostgreSQL 15 para desenvolvimento:
+As credenciais ficam em variáveis de ambiente. Crie seu `.env` a partir do modelo e defina sua senha:
 
 ```bash
+cp .env.example .env
 docker compose up -d
 ```
 
-| Parâmetro | Valor |
-|---|---|
-| Senha | `password` |
-| Banco | `postgres` |
-
-> As credenciais acima são apenas para desenvolvimento local.
+O PostgreSQL 15 sobe na porta `5432`.
 
 ## 🗺️ Roadmap
 
 - [x] Estrutura em camadas (`cmd/` + `internal/`)
 - [x] Router com chi
 - [x] PostgreSQL via Docker Compose
+- [x] Credenciais do banco em variáveis de ambiente (`.env`)
 - [x] `POST /clientes`
 - [ ] Camada `repository` (conexão com o banco via variáveis de ambiente)
 - [ ] Migração SQL criando a tabela `clientes`

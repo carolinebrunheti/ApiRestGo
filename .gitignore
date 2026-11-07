@@ -1,6 +1,12 @@
-# Arquivo .gitignore
-.env           # Nunca suba senhas ou chaves de API!
-/tmp           # Arquivos temporários
-/bin           # Binários compilados
-.vscode/       # Configurações do VS Code
-docker-data/   # Se você criar uma pasta para o banco de dados
+# Variáveis de ambiente (senhas e chaves nunca vão para o GitHub)
+.env
+
+# Arquivos temporários e binários
+/tmp
+/bin
+
+# Editor
+.vscode/
+
+# Dados locais do banco
+docker-data/
